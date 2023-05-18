@@ -18,11 +18,10 @@ tower = "0.4.12"
 tracing = "0.1"
 
 [dependencies.axum]
-version = "0.6.0"
-features = ["headers"]
+git = "https://github.com/tokio-rs/axum.git"
 
 [dependencies.axum-extra]
-version = "0.7.1"
+git = "https://github.com/tokio-rs/axum.git"
 features = ["cookie-signed"]
 
 [dependencies.tokio]

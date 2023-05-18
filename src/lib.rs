@@ -34,7 +34,7 @@
 //!
 //!     let app = Router::new().route("/", get(handler)).layer(session_layer);
 //!
-//!     axum::Server::bind(&"0.0.0.0:3000".parse().unwrap())
+//!     hyper::Server::bind(&"0.0.0.0:3000".parse().unwrap())
 //!         .serve(app.into_make_service())
 //!         .await
 //!         .unwrap();
