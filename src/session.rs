@@ -203,7 +203,8 @@ impl<Store: SessionStore> SessionLayer<Store> {
             .finish();
 
         if let Some(ttl) = self.session_ttl {
-            cookie.set_expires(Some((std::time::SystemTime::now() + ttl).into()));
+            let now = time::OffsetDateTime::now_utc();
+            cookie.set_expires(Some((now + ttl).into()));
         }
 
         if let Some(cookie_domain) = self.cookie_domain.clone() {
